@@ -1,0 +1,22 @@
+{
+  "name": "geospatialsearch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./bin/www"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jest": "^26.4.2",
+    "mongoose": "^5.10.7",
+    "togeojson": "^0.16.0",
+    "xmldom": "^0.3.0"
+  }
+}
