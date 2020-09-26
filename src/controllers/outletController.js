@@ -2,7 +2,7 @@ const outletService = require('../services/outletService');
 
 const getOutletController = async function(req, res, next) {
     const options = {
-        customerLocation : req.params.customerLocation
+        customerLocation : req.query.customerLocation || ''
     }
     try{
         const response = await outletService.getOutlet(options);
