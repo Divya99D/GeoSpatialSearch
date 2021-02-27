@@ -1,9 +1,17 @@
 const mongoose = require('mongoose')
 
 const outletModelSchema = new mongoose.Schema({
-  type : String,
+  type : {
+    type: String,
+    enum: ['Point'],
+    required: true
+  },
   geometry : {
-    type : String,
+    type : {
+      type: String,
+      enum: ['Polygon'],
+      required: true
+    },
     coordinates : [[[Number]]],
   },
   properties: {
@@ -17,8 +25,4 @@ const outletModelSchema = new mongoose.Schema({
   }
 })
 
-
-
-
-module.exports = mongoose.model('deliveryOutlet', outletModelSchema, 'deliveryOutlet');
-
+module.exports = mongoose.model('deliveryOutlets', outletModelSchema, 'deliveryOutlets');
